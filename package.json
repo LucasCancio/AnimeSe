@@ -2,16 +2,20 @@
   "name": "animese_chatbot",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
+  "main": "index.js",
   "scripts": {
     "dev": "ts-node-dev --exit-child src/index.ts",
-    "start2": "npx tsc && node dist/index.js",
     "start": "ts-node src/index.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "chatBot",
+    "typescript",
+    "dialogflow",
+    "myAnimeList"
+  ],
+  "author": "lucas cancio",
+  "license": "MIT",
   "dependencies": {
     "@google-cloud/dialogflow": "^4.6.0",
     "axios": "^0.26.0",
