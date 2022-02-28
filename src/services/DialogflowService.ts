@@ -4,7 +4,7 @@ import { SessionsClient } from "@google-cloud/dialogflow";
 import configs from "../configs/dialogFlowConfig.json";
 configs.client_id = process.env.DIALOGFLOW_CLIENT_ID;
 configs.private_key_id = process.env.DIALOGFLOW_PRIVATE_KEY_ID;
-configs.private_key = process.env.DIALOGFLOW_PRIVATE_KEY;
+configs.private_key = process.env.DIALOGFLOW_PRIVATE_KEY.replace(/\\n/g, "\n");
 
 class DialogflowService {
   private sessionClient: SessionsClient;

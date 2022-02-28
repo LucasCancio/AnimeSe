@@ -13,8 +13,8 @@ const bot = new TelegramBot(token, { polling: true });
 bot.on("message", async (msg) => {
   const { id, first_name } = msg.chat;
 
-  console.log("chat first_name", first_name);
-  console.log("chat message", msg.text);
+  /* console.log("chat first_name", first_name);
+  console.log("chat message", msg.text); */
 
   const dfResponse = await dialogFlowService.sendMessage(
     id.toString(),
@@ -33,7 +33,7 @@ bot.on("message", async (msg) => {
         textResponse += `${anime.node.title} \n`;
       });
     } catch (error) {
-      console.error(error);
+      console.error("error:  ", error);
       if (error.status == 404) {
         textResponse = "Animes não encontrados";
       }
